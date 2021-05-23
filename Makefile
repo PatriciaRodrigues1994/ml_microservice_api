@@ -42,6 +42,12 @@ install:
 			pip install 'pylint<=2.4.4' &&\
 			pip install pytest
 
+validate-circleci:
+      circleci config process .circleci/config.yml
+
+run-circleci-local:
+      circleci local execute
+
 
 test:
 	# Additional, optional, tests could go here
